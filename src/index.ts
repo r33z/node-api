@@ -1,12 +1,12 @@
 import express, { Express } from 'express';
-import { Sequelize } from 'sequelize/types';
+// import { Sequelize } from 'sequelize/types';
 import bodyParser from 'body-parser';
 
 // import { db } from 'db';
 import Router from './router';
 
 class Server {
-  private port: number = 3000;
+  private port = 3000;
   private app: Express;
   // private db: Sequelize;
 
@@ -20,7 +20,7 @@ class Server {
     new Router(this.app);
 
     this.run();
-  };
+  }
 
   public static instance = () => {
     new Server();
@@ -42,6 +42,6 @@ class Server {
       console.log(`Server started at http://localhost:${this.port}`);
     });
   };
-};
+}
 
 Server.instance();

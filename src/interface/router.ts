@@ -4,7 +4,7 @@ export enum HttpMethod {
   PUT = 'put',
   PATCH = 'patch',
   DELETE = 'delete',
-};
+}
 
 export enum RouterAction {
   index = 'index',
@@ -12,4 +12,4 @@ export enum RouterAction {
   create = 'create',
   update = 'update',
   delete = 'delete',
-};
+}

@@ -6,7 +6,7 @@ class ApplicationRouter {
 
   constructor(app: Express) {
     this.app = app;
-  };
+  }
 
   protected route = (
     method: HttpMethod,
@@ -22,9 +22,9 @@ class ApplicationRouter {
   protected resources = (
     path: string,
     Controller: any,
-    actions: RouterAction[] = [],
+    actions: string[] = [],
   ) => {
-    const definedActions: RouterAction[] = actions.length
+    const definedActions: string[] = actions.length
       ? actions
       : Object.values(RouterAction);
 

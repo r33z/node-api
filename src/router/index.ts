@@ -1,7 +1,7 @@
 import { Express } from 'express';
 import * as v1 from 'controllers/v1';
 import ApplicationRouter from './application.router';
-import { HttpMethod, RouterAction } from 'interface/router';
+// import { HttpMethod, RouterAction } from 'interface/router';
 
 /*
 *  this.route(HttpMethod.GET, '/users', UsersController, 'index')
@@ -23,8 +23,8 @@ class Router extends ApplicationRouter {
   }
 
   private routes = () => {
-    this.resources('/v1/health', v1.HealthController, [RouterAction.index])
+    this.resources('/v1/health', v1.HealthController, ['index'])
   };
-};
+}
 
 export default Router;

@@ -15,7 +15,7 @@ class ApplicationController {
     this.params = request.params;
     this.request = request;
     this.response = response;
-  };
+  }
 
   protected success = (payload: any = {}, status = 200) => {
     this.response.status(status).json({ payload: payload });
@@ -24,6 +24,6 @@ class ApplicationController {
   protected failure = (payload: any = {}, status = 422) => {
     this.response.status(status).json({ error: payload });
   };
-};
+}
 
 export default ApplicationController;
